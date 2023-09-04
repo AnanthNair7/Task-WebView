@@ -13,6 +13,7 @@
 		7AE7CBA62AA5A9C300C67898 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE7CBA42AA5A9C300C67898 /* Main.storyboard */; };
 		7AE7CBA82AA5A9C400C67898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE7CBA72AA5A9C400C67898 /* Assets.xcassets */; };
 		7AE7CBAB2AA5A9C400C67898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE7CBA92AA5A9C400C67898 /* LaunchScreen.storyboard */; };
+		7AE7CBB72AA5AA9E00C67898 /* WVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7CBB62AA5AA9E00C67898 /* WVController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7AE7CBA72AA5A9C400C67898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AE7CBAA2AA5A9C400C67898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AE7CBAC2AA5A9C400C67898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AE7CBB62AA5AA9E00C67898 /* WVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		7AE7CB9D2AA5A9C200C67898 /* Task-WebView */ = {
 			isa = PBXGroup;
 			children = (
-				7AE7CB9E2AA5A9C200C67898 /* AppDelegate.swift */,
-				7AE7CBA02AA5A9C200C67898 /* SceneDelegate.swift */,
-				7AE7CBA22AA5A9C300C67898 /* ViewController.swift */,
-				7AE7CBA42AA5A9C300C67898 /* Main.storyboard */,
-				7AE7CBA72AA5A9C400C67898 /* Assets.xcassets */,
-				7AE7CBA92AA5A9C400C67898 /* LaunchScreen.storyboard */,
+				7AE7CBB22AA5AA4800C67898 /* Application */,
+				7AE7CBB32AA5AA5500C67898 /* Controller */,
+				7AE7CBB42AA5AA5E00C67898 /* View */,
+				7AE7CBB52AA5AA6C00C67898 /* Resources */,
 				7AE7CBAC2AA5A9C400C67898 /* Info.plist */,
 			);
 			path = "Task-WebView";
+			sourceTree = "<group>";
+		};
+		7AE7CBB22AA5AA4800C67898 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7AE7CB9E2AA5A9C200C67898 /* AppDelegate.swift */,
+				7AE7CBA02AA5A9C200C67898 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7AE7CBB32AA5AA5500C67898 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7AE7CBA22AA5A9C300C67898 /* ViewController.swift */,
+				7AE7CBB62AA5AA9E00C67898 /* WVController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7AE7CBB42AA5AA5E00C67898 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7AE7CBA42AA5A9C300C67898 /* Main.storyboard */,
+				7AE7CBA92AA5A9C400C67898 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7AE7CBB52AA5AA6C00C67898 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7AE7CBA72AA5A9C400C67898 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +175,7 @@
 			files = (
 				7AE7CBA32AA5A9C300C67898 /* ViewController.swift in Sources */,
 				7AE7CB9F2AA5A9C200C67898 /* AppDelegate.swift in Sources */,
+				7AE7CBB72AA5AA9E00C67898 /* WVController.swift in Sources */,
 				7AE7CBA12AA5A9C200C67898 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,9 +321,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RUN39RF2RH;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Task-WebView/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -302,6 +339,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Com.ananth.Task-WebView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

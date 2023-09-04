@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V9o-eY-aXo">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Task_WebView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appleImage" translatesAutoresizingMaskIntoConstraints="NO" id="MBf-Lr-FCa" userLabel="AppleImgView">
+                                <rect key="frame" x="76" y="96" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8sJ-Ai-kLi" appends="YES" id="qQA-9F-EqV"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swift-og" translatesAutoresizingMaskIntoConstraints="NO" id="yKJ-1h-BfA" userLabel="SwiftImgView">
+                                <rect key="frame" x="76" y="341" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AsP-n0-f0J" appends="YES" id="H7j-xm-fOC"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mediumImage" translatesAutoresizingMaskIntoConstraints="NO" id="eUR-hV-faN" userLabel="MediumImgView">
+                                <rect key="frame" x="76" y="574" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KKz-X3-2LQ" appends="YES" id="ef3-t3-aTH"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VKc-og-8s9"/>
+                    <connections>
+                        <outlet property="MediumImg" destination="eUR-hV-faN" id="0Z5-EL-BP7"/>
+                        <outlet property="SwiftImg" destination="yKJ-1h-BfA" id="L9j-Ig-ZVU"/>
+                        <outlet property="apppleImg" destination="MBf-Lr-FCa" id="PpY-JI-X2y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8sJ-Ai-kLi" userLabel="AppleImgTapGestureRecognizer">
+                    <connections>
+                        <action selector="appleImgTapped:" destination="BYZ-38-t0r" id="sfo-TR-U6i"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="AsP-n0-f0J" userLabel="SwiftTapGestureRecognizer">
+                    <connections>
+                        <action selector="swiftImgTapped:" destination="BYZ-38-t0r" id="Cm7-Nb-Iwg"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="KKz-X3-2LQ" userLabel="MediumTapGestureRecognizer">
+                    <connections>
+                        <action selector="MediumImgTapped:" destination="BYZ-38-t0r" id="AaU-ye-Eki"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="904.58015267175574" y="3.5211267605633805"/>
+        </scene>
+        <!--Controller-->
+        <scene sceneID="KfX-HE-GpW">
+            <objects>
+                <viewController storyboardIdentifier="secondvc" id="FWS-oF-2vK" customClass="WVController" customModule="Task_WebView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ba7-DD-pA7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgd-oZ-Y4Q">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xh8-rY-fsg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xh8-rY-fsg" firstAttribute="bottom" secondItem="Vgd-oZ-Y4Q" secondAttribute="bottom" id="DsM-kp-Y1e"/>
+                            <constraint firstItem="Vgd-oZ-Y4Q" firstAttribute="leading" secondItem="Xh8-rY-fsg" secondAttribute="leading" id="HIz-Yp-bxb"/>
+                            <constraint firstItem="Vgd-oZ-Y4Q" firstAttribute="top" secondItem="Xh8-rY-fsg" secondAttribute="top" id="WgF-ie-Dxr"/>
+                            <constraint firstItem="Xh8-rY-fsg" firstAttribute="trailing" secondItem="Vgd-oZ-Y4Q" secondAttribute="trailing" id="t5M-31-ysD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Vgd-oZ-Y4Q" id="YF7-YB-K16"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3Z-op-CUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794.6564885496182" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NDX-ga-7qb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V9o-eY-aXo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmG-hv-8zD">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="11d-hA-ej3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ocj-36-Krh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22.137404580152669" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appleImage" width="666.66668701171875" height="666.66668701171875"/>
+        <image name="mediumImage" width="533.33331298828125" height="300"/>
+        <image name="swift-og" width="400" height="400"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
